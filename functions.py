@@ -9,20 +9,17 @@ def get_ll(l):
 def get_ul(l):
     with open("Uletters.txt", "r") as file:
         mems = file.readlines()
-        mems = file.readlines()
         mems = rd.choice(mems)
         write_(mems)
 
 def get_n(l):
     with open("numbers.txt", "r") as file:
         mems = file.readlines()
-        mems = file.readlines()
         mems = rd.choice(mems)
         write_(mems)
 
 def get_ss(l):
     with open("special_characters.txt", "r") as file:
-        mems = file.readlines()
         mems = file.readlines()
         mems = rd.choice(mems)
         write_(mems)
