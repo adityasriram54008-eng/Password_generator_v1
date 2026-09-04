@@ -2,33 +2,33 @@ import random as rd
 
 def get_ll(gen):
     with open("Lletters.txt", "r") as file:
-        mems = file.readlines()
-        mems = rd.choice(mems)
-        write_(mems.strip())
+        letters = file.readlines()
+        letters = rd.choice(letters)
+        write_(letters.strip())
         gen+=1
         return gen
 
 def get_ul(gen):
     with open("Uletters.txt", "r") as file:
-        mems = file.readlines()
-        mems = rd.choice(mems)
-        write_(mems.strip())
+        letters = file.readlines()
+        letters = rd.choice(letters)
+        write_(letters.strip())
         gen += 1
         return gen
 
 def get_n(gen):
     with open("numbers.txt", "r") as file:
-        mems = file.readlines()
-        mems = rd.choice(mems)
-        write_(mems.strip())
+        letters = file.readlines()
+        letters = rd.choice(letters)
+        write_(letters.strip())
         gen += 1
         return gen
 
 def get_ss(gen):
     with open("special_characters.txt", "r") as file:
-        mems = file.readlines()
-        mems = rd.choice(mems)
-        write_(mems.strip())
+        letters = file.readlines()
+        letters = rd.choice(letters)
+        write_(letters.strip())
         gen += 1
         return gen
 
@@ -53,5 +53,5 @@ def write_(args):
 
 def display():
     with open("password.txt", "r") as file:
-        r = file.readline()
-    return r
+        content = file.readline()
+    return content
