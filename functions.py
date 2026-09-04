@@ -47,11 +47,15 @@ def randomizer(selected,gen):
         gen = get_ss(gen)
         return gen
 
+def clear_():
+    open("password.txt", "w").close()
+
 def write_(args):
     with open("password.txt", "a") as file:
         file.writelines(args)
 
 def display():
     with open("password.txt", "r") as file:
-        content = file.readline()
-    return content
+        content = file.readlines()
+    return content[-1].strip()
+
