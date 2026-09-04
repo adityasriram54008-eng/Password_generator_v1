@@ -12,8 +12,8 @@ l = st.text_input("Enter length: ", width = 100)
 
 if l:
     l = int(l)
-    if l < 1:
-        st.error("Password length must be greater than 0.")
+    if l < 4:
+        st.error("Password length must be greater than or equal to 4.")
     else:
         st.subheader("COMPONENTS")
         with st.container(border = True, width = 400):
@@ -25,15 +25,17 @@ if l:
                 n_checkbox = st.checkbox("Numbers")
                 ss_checkbox = st.checkbox("Special Characters")
 
-
         gen = 0
         check = 0
         selected = []
 
         if st.button("GENERATE", type = "primary", icon = "⚡️"):
+
             if not any([u_checkbox, l_checkbox, n_checkbox, ss_checkbox]):
                 st.error("Please select at least one component.")
+
             else:
+
                 if u_checkbox:
                     check += 1
                     selected.append("uc")
