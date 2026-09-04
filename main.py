@@ -28,7 +28,7 @@ st.text("\n")
 
 with st.container(gap="small"):
     st.subheader(":green[_Enter Length_]:")
-    l = st.text_input("", width=100, key = "len")
+    l = st.text_input("m",label_visibility= "hidden", width=100, key = "len")
 
 if l:
     v = True
